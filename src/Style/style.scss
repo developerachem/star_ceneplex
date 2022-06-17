@@ -1,0 +1,1895 @@
+// Header Css Start
+
+// Main Header
+.main_header{
+    background-color: #060f19;
+    padding: 10px 0;
+    border-bottom: 1px solid #182028;
+    .main_header_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            width: 20%;
+            img{
+                width: 120px;
+            }
+        }
+        .search{
+            width: 80%;
+            text-align: right;
+            input{
+                width: 0%;
+                height: 37px;
+                padding: 0 0px;
+                margin-right: -5px;
+                border: 1px solid hsla(0,0%,100%,.4);
+                color:hsla(0,0%,100%,.4);
+                outline: none;
+                background-color: inherit;
+                border-radius: 5px;
+                transition: .5s;
+                &::placeholder{
+                    color: hsla(0,0%,100%,.4);
+                }
+                &.active{
+                    width: 50%;
+                    padding: 0 20px;
+                }
+            }
+            button{
+                margin-right: 0 !important;
+                transition: .5s;
+                &:hover{
+                    background-color: #fff;
+                    color: #5f1a89;
+                }
+            }
+        }
+    }
+}
+// Main Menu
+.main_menu{
+    background-color: #060f19;
+    padding: 8px 0;
+    .menu{
+        display: flex;
+        align-items: center;
+        ul{
+            width: 70%;
+            display: flex;
+            li{
+                a{
+                    margin-right: 2px;
+                    color: white;
+                    padding: 5px 10px;
+                    transition: .5s;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    &:hover{
+                        background-color: #5f1a89;
+                    }
+                    &.active{
+                        background-color: #5f1a89;
+                    }
+                }
+            }
+        }
+        .location{
+            width: 30%;
+            text-align: right;
+            button{
+                cursor: pointer;
+                overflow: hidden;
+                border-radius: 5px;
+                padding: 5px 0;
+                border: none;
+                color: #5f1a89;
+                small{
+                    border-right: 1px solid #5f1a89;
+                    background-color: white;
+                    padding: 8px 15px;
+                }
+                span{
+
+                    background-color: white;
+                    padding: 8px 8px;
+                }
+            }
+        }
+    }
+}
+// Headert Css END
+
+// Footer CSS Start
+.footer_top{
+    background-color: #060f19;
+    padding: 50px 0;
+    .footer_content{
+        display: flex;
+        justify-content: space-between;
+        .footer_box{
+            width: 20%;
+            margin-right: 40px;
+            color: white;
+            img{
+                width: 130px;
+                margin-bottom: 7px;
+            }
+            h6{
+                display: block;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            span{
+                width: 50px;
+                height: 3px;
+                border-radius: 7px;
+                background-color: #fff;
+                display: block;
+                margin-bottom: 20px;
+            }
+            b{
+                display: block;
+                margin-bottom: 5px;
+                font-size: 15px;
+            }
+            p{
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+            a{
+                display: block;
+            }
+        }
+    }
+}
+// Footer CSS End
+
+// Banner CSS Start
+.banner{
+    background-image: url(https://image.cineplexbd.com/slider/165502525779203.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+    background-blend-mode: overlay;
+    background-color: #0b04029a;
+    h1{
+        color: white;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: 500;
+    }
+}
+// Banner CSS End
+
+// Social Link CSS Start
+.social_link{
+    padding: 20px 0;
+    background-color: #060f19;
+    .s_link{
+        text-align: center;
+    }
+}
+// Social Link CSS End
+
+// Movis Card CSS Start
+.movie_section{
+    padding: 30px 0;
+    background-color: #4e2171;
+    .tab_menu{
+        display: flex;
+        ul{
+            display: flex;
+            width: 80%;
+            li{
+                margin-right: 20px;
+                
+                a{
+                    font-size: 23px;
+                    font-weight: 600;
+                    color: white;
+                    transition: .5s;
+                    span{
+                        height: 3px;
+                        width: 0%;
+                        border-radius: 10px;
+                        background-color: white;
+                        display: block;
+                        transition: .5s;
+                        margin-top: 5px;
+                    }
+                    &:hover span{
+                        width: 100%;
+                    }
+                    & span.active{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .all_movie_button{
+            text-align: right;
+            width: 20%;
+        }
+    }
+    .movies{
+        padding: 30px 80px;
+        display: flex;
+        .movie_box{
+            width: 16%;
+            position: relative;
+            overflow: hidden;
+            margin-right: 40px;
+            &::after{
+                content: "";
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient(#6f3173 , rgba(17, 16, 16, 0.236));
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .5s;
+                display: none;
+            }
+
+            &:hover::after{
+                display: block;
+            }
+            &:hover .video_box_details{
+                right: -3px;
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+            &:hover .video_play_button{
+                top: 15%;
+            }
+            &:hover .movie_box_content{
+                bottom: 25%;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            img{
+                transition: .5s;
+            }
+            .movie_box_content{
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                color: white;
+                width: 80%;
+                z-index: 99;
+                transition: .5s;
+                opacity: 0;
+                visibility: hidden;
+                h5{
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+                ul{
+                    li{
+                        font-size: 12px;
+                        strong{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .get_tiket{
+                position: absolute;
+                bottom: 8%;
+                left: -3px;
+                z-index: 99;
+                button{
+                    background-color: #4e2171;
+                    border: 1px solid #4e2171;
+                    color: white;
+                    padding: 7px 18px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+            }
+            .video_box_details{
+                position: absolute;
+                bottom: 10.5%;
+                right: -90px;
+                transition: .5s;
+                z-index: 99;
+                a{
+                    background-color: #4e2171;
+                    border: 1px solid #4e2171;
+                    color: white;
+                    padding: 7px 18px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+            }
+            .video_play_button{
+                position: absolute;
+                top: -20%;
+                left: 38%;
+                z-index: 99;
+                transition: .5s;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    img{
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Movis Card CSS End
+
+// Prpmotion Section CSS Start
+.promotion_section{
+    background-image: url(https://cineplexbd.com/static/media/wrap-bg.fd52f865.png);
+    background-position: bottom right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: cover;
+    background-blend-mode: overlay;
+    position: relative;
+    z-index: 99;
+    padding: 50px 0;
+    padding-bottom: 100px 0;
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg, black , rgba(0, 0, 0, 0.34));
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .promotion_body{
+        display: flex;
+        .promotion_left{
+            width: 70%;
+            margin-right: 30px;
+            .latest_news{
+                .latest_news_header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-left: 5px solid #5f1a89;
+                    padding: 15px 0;
+                    padding-left: 20px;
+                    margin-bottom: 20px;
+                    h1{
+                        color: white;
+                        margin-top: 5px;
+                    }
+                    button{
+                        margin-right: 0;
+                        transition: .5s;
+                        font-size: 13px;
+                        padding: 5px 15px !important;
+                        &:hover{
+                            background-color: #fff;
+                            color: #5f1a89;
+                        }
+                    }
+                }
+                .news_body{
+                    display: flex;
+                    height: 400px;
+                    .news_body_left{
+                        width: 60%;
+                        height: 100%;
+                        margin-right: 5%;
+                        position: relative;
+                        overflow: hidden;
+                        &:hover::after{
+                            display: block;
+                        }
+                        &:hover img{
+                            transform: scale(1.1);
+                        }
+                        &:hover .news_name{
+                            bottom: 25%;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        &::after{
+                            content: '';
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: linear-gradient( #6e2b6cd9 , rgba(0, 0, 0, 0.394));
+                            transition: .5s;
+                            display: none;
+                        }
+                        img{
+                            height: 100%;
+                            object-fit: cover;
+                            transition: .5s;
+                        }
+                        .news_name{
+                            position: absolute;
+                            bottom: 10%;
+                            color: white;
+                            font-size: 14px;
+                            left: 5%;
+                            width: 90%;
+                            z-index: 1;
+                            transition: .5s;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                        .news_details{
+                            position: absolute;
+                            bottom: 5%;
+                            left: -3px;
+                            z-index: 11;
+                            button{
+                                background-color: #5f1a89;
+                                border: none;
+                                color: white;
+                                padding: 10px 20px;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .news_body_right{
+                        width: 35%;
+                        height: 100%;
+                        .news_right_side{
+                            position: relative;
+                            overflow: hidden;
+                            height: 195px;
+                            &:hover .news_name{
+                                bottom: 40%;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                            &:hover::after{
+                                display: block;
+                            }
+                            &:hover img{
+                                transform: scale(1.1);
+                            }
+                            &::after{
+                                content: '';
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-image: linear-gradient(#6e2b6cd9 , rgba(0, 0, 0, 0.394));
+                                display: none;
+                            }
+                            img{
+                                height: 100%;
+                                transition: .5s;
+                            }
+                            .news_name{
+                                position: absolute;
+                                bottom: 20%;
+                                color: white;
+                                font-size: 14px;
+                                left: 5%;
+                                width: 90%;
+                                z-index: 1;
+                                transition: .5s;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            .news_details{
+                                position: absolute;
+                                bottom: 12%;
+                                left: -3px;
+                                z-index: 11;
+                                button{
+                                    background-color: #5f1a89;
+                                    border: none;
+                                    color: white;
+                                    padding: 10px 20px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .promotion_banner{
+                .promotion_banner_title{
+                    border-left: 5px solid #5f1a89;
+                    padding: 15px 0;
+                    padding-left: 20px;
+                    margin: 20px 0;
+                    h1{
+                        color: white;
+                    }
+                }
+            }
+        }
+        .promotion_right{
+            width: 30%;
+            .student_reward_box{
+                border-radius: 3px;
+                margin-bottom: 40px;
+                overflow: hidden;
+                h2{
+                    padding: 10px 10px;
+                    background-color: #4e2171;
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+                ul{
+                    border: 1px solid #4e2171;
+                    border-radius: 0 3px 3px 0;
+                    padding: 15px !important;
+                    background-color: #060f1a;
+                    li{
+                        a{
+                            color: white;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .notice_box{
+                border-radius: 3px;
+                margin-bottom: 40px;
+                overflow: hidden;
+                h2{
+                    padding: 10px 10px;
+                    background-color: #4e2171;
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+                p{
+                    border: 1px solid #4e2171;
+                    border-radius: 0 3px 3px 0;
+                    padding: 15px;
+                    color: white;
+                    font-size: 14px;
+                    background-color: #060f1a;
+                }
+            }
+            .poll_box{
+                border-radius: 3px;
+                margin-bottom: 40px;
+                overflow: hidden;
+                h2{
+                    padding: 10px 10px;
+                    background-color: #182028;
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+                .poll_content{
+                    border: 1px solid #182028;
+                    border-radius: 0 3px 3px 0;
+                    padding: 15px;
+                    color: white;
+                    font-size: 14px;
+                    background-color: #060f1a;
+                    form{
+                        margin-top: 15px;
+                        input{
+                            margin-right: 5px;
+                        }
+                        label{
+                            margin-right: 10px;
+                        }
+                        button{
+                            margin-top: 10px;
+                            padding: 8px 14px;
+                        }
+                    }
+                }
+            }
+            .vote_box{
+                border-radius: 3px;
+                margin-bottom: 40px;
+                overflow: hidden;
+                h2{
+                    padding: 10px 10px;
+                    background-color: #182028;
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+                ul{
+                    border: 1px solid #182028;
+                    border-radius: 0 3px 3px 0;
+                    padding: 15px !important;
+                    background-color: #060f1a;
+                    li{
+                        color: white;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 5px;
+                        input{
+                            width: 10%;
+                            height: 10%;
+                            cursor: pointer;
+                        }
+                        p{
+                            width: 80%;
+                            margin-right:5px;
+                        }
+                        span{
+                            // width: 15%;
+                            background-color: #777777;
+                            padding: 3px 5px;
+                            border-radius: 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Prpmotion Section CSS End
+
+// Movie Detail Banner CSS Start
+.details_banner{
+    background-image: url(https://image.cineplexbd.com/movies/165502476134049.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    padding: 300px 0;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.539);
+    overflow-x: hidden !important;
+    filter: blur(7px);
+        -webkit-filter: blur(7px);
+    transform: scale(1.1);
+    z-index: -1;
+    position: relative;
+}
+// Movie Detail Banner CSS End
+
+// Mobie Detail Content CSS Start
+.movie_details{
+    background-color: #060f19;
+    .test{
+        position: relative;
+        bottom: 450px;
+        .movie_details_content{
+            display: flex;
+            align-items: center;
+            .movie_details_content_left{
+                width: 32%;
+                margin-right: 30px;
+            }
+            .movie_details_content_right{
+                width: 60%;
+                color: white;
+                // h5{}
+                span{
+                    margin: 10px 0;
+                    display: block;
+                    small{
+                        font-size: 16PX;
+                    }
+                }
+                table{
+                    margin-bottom: 15px;
+                    tbody{
+                        tr{
+                            padding: 20px 0;
+                            th{
+                                font-size: 15px;
+                                font-weight: 500;
+                                p{
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .singel_show_time{
+            margin-top: 50px;
+            .show_content{
+                padding: 15px 0;
+                padding-left: 20px;
+                border-left: 4px solid #5f1a89;
+                h2{
+                    color: white;
+                    font-size: 22px;
+                }
+                p{
+                    color: white;
+                    font-size: 13px;
+                    margin-bottom: 10px !important;
+                }
+                button{
+                    background-color: inherit;
+                    color: white;
+                    border: 1px solid #5f1a89;
+                    border-radius: 5px;
+                    padding: 5px 20px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .show_time_area{
+            margin-bottom: -300px;
+            margin-top: 50px;
+            display: flex;
+            .show_time_box{
+                width: 25%;
+                color: white;
+                border-right: 1px solid #39353c;
+                .show_time_box_title{
+                    text-align: center;
+                    background-color: #3e3e40;
+                    padding: 25px 0;
+                }
+                .show_time_box_body{
+                    background-color: #252629;
+                    padding: 20px 20px;
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            height: 35px;
+                            width: 28.3%;
+                            background-color: #5bdf83;
+                            margin-right: 5%;
+                            margin-bottom: 5%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 13px;
+                            color: black;
+                            position: relative;
+                            &::after{
+                                content: '';
+                                height: 10px;
+                                width: 10px;
+                                border-radius: 50%;
+                                background-color: #252629;
+                                position: absolute;
+                                top: 38%;
+                                right: -5%;
+                            }
+                            &::before{
+                                content: '';
+                                height: 10px;
+                                width: 10px;
+                                border-radius: 50%;
+                                background-color: #252629;
+                                position: absolute;
+                                top: 38%;
+                                left: -5%;
+                            }
+                        }
+                    }
+                }
+                .show_time_box_getTicket{
+                    
+                    a{
+                        width: 100%;
+                        display: inline-block;
+                        text-align: center;
+                        background-color: #5f1a89;
+                        border: 2px solid #5f1a89;
+                        outline: none;
+                        color: white;
+                        padding: 3px 0;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                        font-size: 14px;
+                        transition: .5s;
+                        &:hover{
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobie Detail Content CSS End
+
+// Login Page CSS Start
+.login_section{
+    padding: 100px 0;
+    background-color: #f8eff4;
+    .login_page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login_box{
+            // height: 520px;
+            width: 520px;
+            background:#ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+            .login_box_title{
+                padding: 15px 0;
+                text-align: center;
+                background-color: #5f1a89;
+                color: white;
+                h4{
+                    font-size: 20px;
+                }
+            }
+            .login_form{
+                padding: 30px;
+                color: #728486;
+                form{
+                    label{
+                        font-size: 13px !important;
+                    }
+                    input{
+                        color: #728486;
+                        outline: none;
+                        border: 1px solid #ccc;
+                        &::placeholder{
+                            color: #728486 !important;
+                        }
+                    }
+                    .login_password_field{
+                        display: flex;
+                        margin-bottom: 10px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        border: 1px solid #ccc;
+                        input{
+                            border: none;
+                        }
+                        button{
+                            background-color: #eeeeee;
+                            border: none;
+                            border-left: 1px solid #ccc;
+                            padding: 010px;
+                            margin-bottom: 0;
+                            svg{
+                                color: #555555;
+                            }
+                        }
+                    }
+                    .forget_pass{
+                        a{
+                            color: #5f1a89;
+                            font-size: 13px;
+                            span{
+                                color: #b945ff;
+                            }
+                        }
+                    }
+                    button{
+                        margin-bottom: 20px;
+                        transition: .5s;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 500;
+                        &:hover{
+                            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+                        }
+                    }
+                }
+                .for_line{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: #ccc;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                    }
+                    span{
+                        display: inline-block;
+                        height: 35px;
+                        width: 35px;
+                        font-size: 12px;
+                        border-radius: 50%;
+                        border: 1px solid #ccc;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #fff;
+                        position: relative;
+                        z-index: 99;
+                    }
+                }
+                .gest_login{
+                    margin-bottom: 30px;
+                    button{
+                        border: 1px solid #5f1a89;
+                        color: #5f1a89;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 500;
+                        transition: .5s;
+                        &:hover{
+                            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+                        }
+                    }
+                }
+                .regstration_button{
+                    text-align: center;
+                    a{
+                        color: #5f1a89;
+                        font-size: 13px;
+                        span{
+                            color: #b945ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Login Page CSS End
+
+// Registration Page CSS Start
+.register_section{
+    padding: 100px 0;
+    background-color: #f8eff4;
+    .register_page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .register_box{
+            width: 520px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+            background-color: #fff;
+            .register_title{
+                padding: 15px 0;
+                text-align: center;
+                background-color: #5f1a89;
+                color: white;
+                h4{
+                    font-size: 20px;
+                }
+            }
+            .register_body{
+                padding: 30px;
+                color: #728486;
+                form{
+                    label{
+                        font-size: 14px !important;
+                        font-weight: 500;
+                        // display: block;
+                        cursor: pointer;
+                    }
+                    input{
+                        color: #728486;
+                        outline: none;
+                        border: 1px solid #ccc;
+                        width: 100%;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        &::file-selector-button{
+                            padding: 2px 8px;
+                            font-size: 13px;
+                        }
+                        &::placeholder{
+                            color: #728486 !important;
+                        }
+                    }
+                    select{
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        background-color: #fff;
+                        padding: 8px 10px;
+                        border-radius: 5px;
+                        font-size: 14px;
+                    }
+                    .reg_number{
+                        display: flex;
+                        border: 1px solid #ccc;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        input{
+                            border: none;
+                        }
+                        span{
+                            display: block;
+                            padding: 0 10px;
+                            background-color: #eeeeee;
+                            border: none;
+                            border-right: 1px solid #ccc;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 13px;
+                            color: #5f6163;
+                        }
+                    }
+                    button{
+                        margin-bottom: 20px;
+                        transition: .5s;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 500;
+                        &:hover{
+                            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+                        }
+                    }
+                }
+                .login_button{
+                    text-align: center;
+                    a{
+                        color: #5f1a89;
+                        font-size: 13px;
+                        span{
+                            color: #b945ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Registration Page CSS End
+
+// Ticket Page CSS Start
+.ticket_page{
+    padding: 50px 0; 
+    background-color: #f8eff4;
+    .ticket_page_body{
+        display: flex;
+        .ticket_page_left{
+            width: 70%;
+            .ticket_header{
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(110, 75, 132, 0.24);
+                margin-bottom: 15px;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                    display: flex;
+                    align-items: center;
+                    button{
+                        height: 20px;
+                        width: 20px;
+                        background-color: #06143f;
+                        border: none;
+                        border-radius: 50%;
+                        color: #f8eff4;
+                        font-size: 17px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 10px;
+                    }
+                }
+                button{
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #6e4b84;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+            .date_select{
+                margin-top: 30px;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                }
+                .date_select_card{
+                    display: flex;
+                    .current_date_box{
+                        width: 100px;
+                        height: 70px;
+                        background-color: #fff;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        padding: 10px;
+                        cursor: pointer;
+                        transition: .5s;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                        overflow: hidden;
+                        &.active{
+                            border: 2px solid #5f1a89;
+                            
+                            p{
+                                color: #5f1a89;
+                                font-size: 13px;
+                                font-weight: 600;
+                            }
+                            span{
+                                color: #5f1a89;
+                                font-size: 20px;
+                                font-weight: 500;
+                                display: inline-block;
+                                small{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        p{
+                            color: #8b8f9c;
+                            font-size: 13px;
+                            font-weight: 400;
+                        }
+                        span{
+                            color: #8b8f9c;
+                            font-size: 20px;
+                            font-weight: 400;
+                            display: inline-block;
+                            small{
+                                font-size: 12px;
+                            }
+                        }
+                        &:last-child{
+                            padding: 0 !important;
+                            border-color: white;
+                        }
+                        &:hover{
+                            box-shadow: 0 10px 20px 0 rgba(95, 26, 137, 0.4);
+                        }
+                        label{
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            cursor: pointer;
+                            .datebox_label_lefft{
+                                width: 60%;
+                                background-color: #fff;
+                                height: 100%;
+                                padding: 10px 5px;
+                                p{
+                                    font-size: 11px;
+                                    color: #8b8f9c;
+                                }
+                                span{
+                                    font-size: 11px;
+                                    color: #5f1a89;
+                                }
+                            }
+                            .datebox_label_right{
+                                width: 40%;
+                                height: 100%;
+                                background-color: #f3e5ff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .movie_select_option{
+                margin-top: 30px;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                }
+                .movie_select_box{
+                    margin-bottom: 30px;
+                    button{
+                        text-align: left;
+                        height: 150px;
+                        width: 100px;
+                        background-color: transparent;
+                        border: none;
+                        margin-right: 10px;
+                        &.active{
+                            position: relative;
+                            
+                            &::before{
+                                content: '';
+                                width: 40%;
+                                height: 40%;
+                                background-image: url(https://ticket.cineplexbd.com/c86e3a5d01e9adb3fada421edead45fa.svg);
+                                background-position: 0 0;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                position: absolute;
+                                top: 33%;
+                                left: 29%;
+                            }
+                            p{
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: #5f1a89;
+                            }
+                            img{
+                                box-shadow: 0 10px 20px 0 rgba(95, 26, 137, 0.4);
+                            }
+                        }
+                        &:hover img{
+                            box-shadow: 0 10px 20px 0 rgba(95, 26, 137, 0.4);
+                        }
+                        img{
+                            border-radius: 5px;
+                            margin-bottom: 8px;
+                            transition: .5s;
+                        }
+                        p{
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: #8d8f9c;
+                        }
+                    }
+                }
+            }
+            .select_show_time{
+                margin-top: 30px;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                    margin-bottom: 10px;
+                }
+                .select_show_box{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    background-color: #fff;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                    h4{
+                        margin-bottom: 0 !important;
+                    }
+                    .select_show_time_box{
+                        display: flex;
+                        button{
+                            display: inline-block;
+                            padding: 7px 15px;
+                            border: 1px solid #8d8f9c;
+                            border-radius: 5px;
+                            color: #8d8f9c;
+                            margin-left: 10px;
+                            background-color: #fff;
+                            transition: .5s;
+                            &:hover{
+                                box-shadow: 0 10px 20px 0 rgba(95, 26, 137, 0.4);
+                                color: #5f1a89;
+                                border-color: #5f1a89;
+                            }
+                            &.active{
+                                color: #5f1a89;
+                                border: 2px solid #5f1a89;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+            .select_seat_type_and_ticket_quanty{
+                margin-top: 30px;
+                display: flex;
+                .select_seat_type{
+                    width: 55%;
+                    margin-right: 5%;
+                    h4{
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #060f19;
+                        margin-bottom: 10px;
+                    }
+                    .select_seat_type_box{
+                        background-color: #fff;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                        padding: 15px 20px;
+                        padding-top: 20px;
+                        border-radius: 5px;
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        .select_seat_type_option{
+                            width: 140px;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 15px;
+                            input{
+                                margin-right: 10px;
+                                height: 20px;
+                                width: 20px;
+                            }
+                            label{
+                                cursor: pointer;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #1b242d;
+                                p{
+                                    color: #4f525c;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ticket_quanty{
+                    width: 40%;
+                    h4{
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #060f19;
+                        margin-bottom: 10px;
+                    }
+                    .ticket_quanty_box{
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                        padding: 20px 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        button{
+                            width: 15%;
+                            height: 45px;
+                            border: none;
+                            background-color: #5f1a89;
+                            color: white;
+                            border-radius: 5px;
+                            transition: .5s;
+                            &:first-child{
+                                color: #5f1a89;
+                                background-color: #e9d6f5;
+                            }
+                            &:hover{
+                                box-shadow: 0 10px 20px 0 rgba(95, 26, 137, 0.4);
+                            }
+                        }
+                        .ticket_quanty_content{
+                            width: 50%;
+                            text-align: center;
+                            h4{
+                                text-align: center;
+                                margin-bottom: 0;
+                            }
+                            p{
+                                font-size: 13px;
+                                color: #8d8f9c;
+                            }
+                        }
+                    }
+                }
+            }
+            .select_seat{
+                margin-top: 30px;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                    margin-bottom: 10px;
+                }
+                .seat_body{
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                    .seat_body_header{
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #8d8f9c6e;
+                        span{
+                            display: inline-block;
+                            height: 40px;
+                            width: 40px;
+                            border: 1px solid green;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                        }
+                        ul{
+                            display: flex;
+                            li{
+                                margin-left: 20px;
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    width: 20px;
+                                    margin-right: 5px;
+                                }
+                                p{
+                                    font-size: 15px;
+                                    color: #060f19;
+                                }
+                            }
+                        }
+                    }
+                    .main_seat{
+                        margin-top: 15px;
+                        ul{
+                            display: flex;
+                            margin: auto !important;
+                            margin-bottom: 5px !important;
+                            width: 600px;
+                            &:last-child{
+                                position: relative;
+                                right: 12px;
+                            }
+                            li{
+                                margin-right: 5px;
+                                width: 20px;
+                                button{
+                                    font-size: 10px;
+                                    height: 20px;
+                                    width: 20px;
+                                    color: #28ac46;
+                                    background: transparent;
+                                    border: none;
+                                    position: relative;
+                                    z-index: 99;
+                                    &::after{
+                                        content: '';
+                                        height: 100%;
+                                        width: 100%;
+                                        background-image: url(https://ticket.cineplexbd.com/ed63bffeab122d4aa21f7e8592da492e.svg);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: -1;
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ticket_page_right{
+            width: 30%;
+            .ticket_overview{
+                margin: 0 15px;
+                position: sticky;
+                top: 0;
+                h4{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #060f19;
+                    margin-bottom: 14px;
+                }
+                .ticket_overview_box{
+                    box-shadow: 0 30px 30px 0 rgba(95, 26, 137, 0.15);
+                    padding: 18px;
+                    background-color: #fff;
+                    border-radius: 7px;
+                    .movie_overview{
+                        display: flex;
+                        .movie_overview_image{
+                            width: 30%;
+                            img{
+                                width: 80px;
+                                height: 110px;
+                                border-radius: 6px;
+                            }
+                        }
+                        .movie_overview_name{
+                            width: 70%;
+                            span{
+                                display: inline-block;
+                                border: 1px solid #5f1a89;
+                                color: #5f1a89;
+                                padding: 0px 3px;
+                                font-size: 11px;
+                                font-weight: 600;
+                                border-radius: 5px;
+                                margin-bottom: 7px;
+                            }
+                            h4{
+                                font-size: 15px;
+                                color: #5f1a89;
+                                font-weight: 500;
+                                line-height: 1.5;
+                                margin-bottom: 5px;
+                            }
+                            p{
+                                font-size: 11px;
+                                font-weight: normal;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.55;
+                                letter-spacing: normal;
+                                text-align: left;
+                                color: #958b9c;
+                            }
+                        }
+                    }
+                    ul{
+                        margin-top: 20px !important;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+                            .movie_overview_list{
+                                display: flex;
+                                img , svg{
+                                    width: 19px;
+                                    margin-right: 10px;
+                                    color:#5f1a89;
+                                }
+                                h5{
+                                    margin-bottom: 0;
+                                    font-size: 14px;
+                                    color: #958b9c;
+                                    font-weight: normal;
+                                }
+                            }
+                            span{
+                                font-size: 14px;
+                                font-weight: 600;
+                                float: right;
+                                color: #5f1a89;
+                                display: flex;
+                                align-items: center;
+                                label{
+                                    cursor: pointer;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: #a69ea0 ;
+                                }
+                                input{
+                                    margin-left: 10px;
+                                    margin-right: 3px;
+                                    height: 23px;
+                                    width: 23px;
+                                    border: 1px solid #a69ea0;
+                                    border-radius: 50%;
+                                    appearance: none;
+                                    position: relative;
+                                    overflow: hidden;
+                                    &::after{
+                                        content: '';
+                                        height: 100%;
+                                        width: 100%;
+                                        background-image: url(https://ticket.cineplexbd.com/8b54eb3b6d0136ced1d75f9831c92159.svg);
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        display: none;
+                                    }
+                                    &:checked::after{
+                                        display: block;
+                                    }
+                                    &:checked ~ label{
+                                        color: #5f1a89;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ticket_others_name_field{
+                        
+                        input{
+                            width: 100%;
+                            margin-top: 10px;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            border: 1px solid #ccc;
+                            outline: none;
+                            color: #5f6163;
+                            &::placeholder{
+                                color: #8b94a9;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    button{
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin: 20px 0;
+                        transition: .5s;
+                        &:hover{
+                            box-shadow: 0 30px 30px 0 rgba(94, 26, 137, 0.205);
+                        }
+                    }
+                    p{
+                        font-size: 11px;
+                        color: #958b9c;
+                        a{
+                            color: #5f1a89;
+                            text-decoration: underline !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Ticket Page CSS End
+
+// User Profile Page CSS Start
+.user_profile{
+    background-color: #f8eff4;
+    padding: 50px 0;
+    .user_profile_body{
+        display: flex;
+        justify-content: space-between;
+        .side_menu{
+            width: 30%;
+            margin-right: 5%;
+            .side_menu_box{
+                background-color: #fff;
+                padding: 15px 20px;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                border-radius: 7px;
+                .side_menu_header{
+                    text-align: center;
+                    margin-bottom: 30px;
+                    .user_photo{
+                        height: 130px;
+                        width: 130px;
+                        border-radius: 50%;
+                        margin: auto;
+                        position: relative;
+                        label{
+                            height: 30px;
+                            width: 30px;
+                            background-color: #5f1a89;
+                            border-radius: 50%;
+                            color: white;
+                            font-size: 15px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            position: absolute;
+                            bottom: 0;
+                            right: 10%;
+                        }
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                    .user_content{
+                        margin-top: 20px;
+                        text-align: center;
+                        h1{
+                            font-size: 17px;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                        }
+                        p{
+                            font-size: 13px;
+                            color: #252627;
+                            font-weight: 500;
+                            margin-top: 5px;
+                            margin-bottom: 20px !important;
+                        }
+                        a{
+                            padding: 5px 35px;
+                            background-color: white;
+                            border: 1px solid #79818a57;
+                            border-radius: 20px;
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: #5f1a89;
+                        }
+                    }
+                }
+                .profile_menu{
+                    margin-bottom: 30px;
+                    h1{
+                        color: #333333;
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        margin-bottom: 20px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                width: 100%;
+                                padding: 10px 0 !important;
+                                display: block;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: #000000;
+                                svg{
+                                    color: #5f1a89 !important;
+                                    margin-right: 15px;
+                                    font-weight: 600;
+                                    font-size: 50px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .profile_page{
+            width: 65%;
+            .profile_body{
+                width: 100%;
+                height: 597px;
+                background-color: #fff;
+                border-radius: 7px;
+                padding: 30px 20px;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                h4{
+                    font-size: 19px;
+                    margin-bottom: 25px;
+                    letter-spacing: 1px;
+                }
+                ul{
+                    li{
+                        display: flex;
+                        margin-bottom: 18px;
+                        span{
+                            width: 200px;
+                            font-size: 13px;
+                            color: #777f88;
+                        }
+                        p{
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #5f1a89;
+                        }
+                    }
+                }
+
+                // Change Password CSS
+                form{
+                    .mb-3{
+                        display: flex;
+                        label{
+                            width: 30%;
+                            font-size: 14px;
+                            color: #777f88;
+                        }
+                        p{
+
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #5f1a89;
+                        }
+                        input , select{
+                            width: 70%;
+                            border: 1px solid #777f887a;
+                            border-radius: 5px;
+                            padding: 3px 10px;
+                            background-color: #fff;
+                            option{
+                                font-weight: 15px;
+                            }
+                        }
+                    }
+                    button{
+                        background-color: #976ab2;
+                        color: rgba(255, 255, 255, 0.89);
+                        padding: 5px 15px;
+                        border: none;
+                        border-radius: 5px;
+                    }
+                }
+
+                // Tecket Page
+                table{
+                    width: 100%;
+                    tbody{
+                        tr{
+                            th{
+                                background-color: #5f1a89;
+                                padding: 10px 5px;
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 400;
+                                border: 1px solid #ddd;
+                            }
+                            td{
+                                border: 1px solid #ddd;
+                                padding: 5px;
+                                font-size: 13px;
+                                button{
+                                    background-color: transparent;
+                                    border: none;
+                                    margin-left: 10px;
+                                    color: #5f1a89;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// User Profile Page CSS End
+
+// 404 Page CSS Start
+.error_page{
+    height: 100vh;
+    background: #000;
+    .error_body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .error_box{
+            width: 450px;
+            text-align: center;
+            h1{
+                color: #222;
+                font-size: 220px;
+                letter-spacing: 10px;
+                margin: 0;
+                font-weight: 700;
+                text-shadow: 2px 2px 0 #c9c9c9,-2px -2px 0 #c9c9c9;
+                margin-bottom: 0;
+                span{
+                    text-shadow: 2px 2px 0 #ffab00,-2px -2px 0 #ffab00,0 0 8px #ff8700;
+                }
+            }
+            p{
+                color:#c9c9c9;
+                margin-bottom: 20px !important;
+            }
+            a{
+                border: 1px solid #c9c9c9;
+                padding: 10px 20px;
+                background-color: transparent;
+                color: white;
+                font-size: 15px;
+
+            }
+        }
+    }
+}
+// 404 Page CSS end
